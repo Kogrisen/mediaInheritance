@@ -16,6 +16,14 @@ namespace mediaInheritance
 
     internal class Film : Media
     {
+        public Film(string title, string release_year, string director, int length, string studio)
+        {
+            this.title = title;
+            this.release_year = release_year;
+            this.creator = director;
+            this.length = length;
+            this.studio = studio;
+        }
         private string studio;
         protected int length;
 
@@ -39,7 +47,7 @@ namespace mediaInheritance
             this.length = pages;
             this.publisher = publisher;
         }
-        private bool author_known;
+        
         private string publisher;
         protected int length;
 
