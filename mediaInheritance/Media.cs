@@ -29,11 +29,11 @@ namespace mediaInheritance
 
         public override string ToString()
         {
-            return String.Format("Name; {0}\n" +
+            return String.Format("Name: {0}\n" +
                 "Release year: {1}\n" +
                 "Director: {2}\n" +
                 "Runtime: {3}\n" +
-                "Studio: {4}", title, release_year, creator, length, studio);
+                "Studio: {4}\n", title, release_year, creator, length, studio);
         }
     }
 
@@ -63,12 +63,12 @@ namespace mediaInheritance
 
     internal class Game : Media
     {
-        public Game(string title, string genre, string release_year, bool multiplayer, string creator, string publisher)
+        public Game(string title, string genre, string release_year, bool multiplayer, string studio, string publisher)
         {
             this.title = title;
             this.genre = genre;
             this.release_year = release_year;
-            this.creator = creator;
+            this.creator = studio;
             this.multiplayer = multiplayer;
             this.publisher = publisher;
         }
@@ -77,12 +77,12 @@ namespace mediaInheritance
         string genre;
         public override string ToString()
         {
-            return String.Format("Name; {0}\n" +
+            return String.Format("Name: {0}\n" +
                 "Genre: {1}" +
                 "Release year: {2}\n" +
                 "Multiplayer: {3}\n" +
                 "Studio: {4}\n" +
-                "Publisher: {5}", title, genre, release_year, multiplayer, creator, publisher);
+                "Publisher: {5}\n", title, genre, release_year, multiplayer, creator, publisher);
         }
     }
 }
